@@ -29,12 +29,12 @@ addcmd({"Teleport", "to"}, "teleport to a player", function(args)
     end
     
     local player = args[1]
-    if player == lp then
+    if player == lp.Name then
          return
     end
     
-    local player = game:GetService('Players'):FindFirstChild(args[1])
-    local character = player and player.Character and player.Character:FindFirstChild('HumanoidRootPart')
+    local plyr = game:GetService('Players'):FindFirstChild(player)
+    local character = plyr and plyr.Character and plyr.Character:FindFirstChild('HumanoidRootPart')
     
     if character then
          HumanoidRootPart:PivotTo(character.CFrame)
