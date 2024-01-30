@@ -5,7 +5,7 @@ local pf: string = "!"
 
 local lp: userdata = game:GetService("Players").LocalPlayer
 
-local addcmd = function(names: {string}, func: (args: {any}) -> void)
+local addcmd = function(names: {string}, func: (args: {string}) -> void)
 
     --[[ 
         assert(type(names) == "table")
