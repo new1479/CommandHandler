@@ -1,9 +1,9 @@
 
 local cmds = {}
 
-local pf: string = "!"
+local pf = "!"
 
-local lp: userdata = game:GetService("Players").LocalPlayer
+local lp = game:GetService("Players").LocalPlayer
 
 local addcmd = function(names: {string}, func: (args: {string}) -> void)
 
@@ -32,7 +32,7 @@ end)
 
 
 lp.Chatted:Connect(function(msg)
-    local args: {string} = msg:lower():split(" ")
+    local args = msg:lower():split(" ")
 
     if string.sub(args[1], 1, 1) ~= pf then 
         return 
