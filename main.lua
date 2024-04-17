@@ -1,6 +1,14 @@
+--[[
+     N33w
+    Updated - 17/04/2024
+]]
 local cmds = {}
 
 local pf = '>'
+
+local cmds.setpf = function(x)
+    prefix = x
+end
 
 local cmds.addcmd = function(...)
     local args = {...}
