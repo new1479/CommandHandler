@@ -1,5 +1,7 @@
 local cmds = {}
 
+local pf = '>'
+
 local cmds.addcmd = function(...)
     local args = {...}
 
