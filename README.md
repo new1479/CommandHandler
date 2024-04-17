@@ -2,7 +2,7 @@
 - Allows you to have multiple arguments and aliases
 - Fairly simple. Designed for noobs, and also so that only you guys can make it even more slower than it already is. haha
 
-##Here's some basic examples on how to use the module
+Here's some basic examples on how to use the module
 ```lua
 local api = loadstring(game:HttpGet("https://raw.githubusercontent.com/new1479/CommandHandler/main/main.lua"))()
 
@@ -11,7 +11,7 @@ api.addcmd({"hello", "greet", "sayhello"}, function(args)
 end)
 ```
 
-#Printing the arguments.
+Printing the arguments.
 ```lua
 api.addcmd({"args"}, function(args)
     for i = 1, 10 do
@@ -20,12 +20,12 @@ api.addcmd({"args"}, function(args)
 end)
 ```
 
-#setting a prefix
+Setting a prefix
 defuilt prefix for the command handler is '>' but can be changed using this function
 ```lua
 api.setpf(__PREFIX_HERE__)
 ```
-#here's one last example incase you still don't understand it all
+Here's one last example incase you still don't understand it all
 ```lua
 local api = loadstring(game:HttpGet("https://raw.githubusercontent.com/new1479/CommandHandler/main/main.lua"))()
 
