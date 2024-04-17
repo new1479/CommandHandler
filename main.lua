@@ -1,35 +1,24 @@
-
 local cmds = {}
 
-local pf = "!"
+local cmds.addcmd = function(...)
+    local args = {...}
 
-local lp = game:GetService("Players").LocalPlayer
+    if #args ~= 2 then
+        return false
+    end
 
-local addcmd = function(names: {string}, func: (args: {string}) -> void)
+    local names = args[1]
+    local func = args[2]
 
-    --[[ 
-        assert(type(names) == "table")
-        assert(type(func) == "function")
-    ]]
+    assert(type(names) == "table")
+    assert(type(func) == "function")
 
-    for i, _ in next, names do
-        if not cmds[names[i]] then
-            cmds[names[i]] = func
+    for _, name in ipairs(names) do
+        if not cmds[name] then
+            cmds[name] = func
         end
     end
 end
-
--- examples
-addcmd({"hello", "greet", "sayhello"}, function(args)
-    print("Hello, my name is " ..args[1])
-end)
-
-addcmd({"args"}, function(args)
-    for i = 1, 10 do
-        print(args[i])
-    end
-end)
-
 
 lp.Chatted:Connect(function(msg)
     local args = msg:lower():split(" ")
@@ -48,3 +37,5 @@ lp.Chatted:Connect(function(msg)
 
     cmds[check](args)
 end)
+
+return cmds
