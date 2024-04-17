@@ -11,7 +11,7 @@ api.addcmd({"hello", "greet", "sayhello"}, function(args)
 end)
 ```
 
-##Printing the arguments.
+#Printing the arguments.
 ```lua
 api.addcmd({"args"}, function(args)
     for i = 1, 10 do
@@ -20,12 +20,12 @@ api.addcmd({"args"}, function(args)
 end)
 ```
 
-##setting a prefix
+#setting a prefix
 defuilt prefix for the command handler is '>' but can be changed using this function
 ```lua
 api.setpf(__PREFIX_HERE__)
 ```
-##here's one last example incase you still don't understand it all
+#here's one last example incase you still don't understand it all
 ```lua
 local api = loadstring(game:HttpGet("https://raw.githubusercontent.com/new1479/CommandHandler/main/main.lua"))()
 
